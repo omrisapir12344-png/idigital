@@ -23,6 +23,9 @@
     .start { margin-top:34px; min-width:210px; min-height:58px; padding:0 28px; border:0; border-radius:16px; color:#fff; background:var(--ink); font:800 1.08rem Heebo,Arial,sans-serif; cursor:pointer; box-shadow:0 16px 34px rgba(8,9,11,.18); transition:transform .18s ease,box-shadow .18s ease; }
     .start:hover { transform:translateY(-2px); box-shadow:0 20px 38px rgba(8,9,11,.22); }
     .start:focus-visible { outline:3px solid var(--violet); outline-offset:4px; }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:34px; }
+    .actions .start { margin:0; min-width:0; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; }
+    .actions .web-chat { color:var(--ink); background:transparent; border:1px solid #b9bac4; box-shadow:none; }
     .visual { position:relative; min-height:520px; display:grid; place-items:center; }
     .halo { position:absolute; width:min(43vw,470px); aspect-ratio:1; border-radius:50%; background:linear-gradient(145deg,#ece9ff,#fff 62%); box-shadow:0 28px 90px rgba(55,42,117,.13); }
     .gaia { position:relative; z-index:1; width:min(38vw,410px); height:auto; filter:drop-shadow(0 30px 26px rgba(30,25,61,.16)); }
@@ -35,7 +38,8 @@
       .brand { width:164px; margin:0 auto 25px; }
       h1 { font-size:clamp(2.55rem,13vw,4.3rem); }
       p { margin-top:18px; font-size:1.03rem; }
-      .start { width:100%; max-width:340px; margin-top:25px; }
+      .actions { width:min(100%,340px); margin:25px auto 0; flex-direction:column; }
+      .actions .start { width:100%; min-height:52px; }
       .visual { min-height:310px; order:-1; }
       .halo { width:min(78vw,330px); }
       .gaia { width:min(69vw,300px); }
@@ -48,8 +52,11 @@
     <section class="copy" aria-labelledby="page-title">
       <div class="brand" dir="ltr" aria-label="iDigital">iDigital</div>
       <h1 id="page-title">היי, אני גאיה.</h1>
-      <p>אני כאן כדי לעזור במידע על מוצרים, הזמנות, שירות ועוד. מתחילים בכמה פרטים קצרים וממשיכים מיד לשיחה.</p>
-      <button class="start" type="button" data-open-gaia>מתחילים לדבר</button>
+      <p>אני כאן כדי לעזור עם מוצרים, הזמנות ושירות. אפשר להמשיך את השיחה בוואטסאפ או לדבר איתי כאן באתר.</p>
+      <div class="actions">
+        <a class="start" href="https://wa.me/97239005355">להמשך השיחה בוואטסאפ</a>
+        <button class="start web-chat" type="button" data-open-gaia>לצ׳אט באתר</button>
+      </div>
     </section>
     <section class="visual" aria-label="גאיה, העוזרת הדיגיטלית של iDigital">
       <div class="halo" aria-hidden="true"></div>
